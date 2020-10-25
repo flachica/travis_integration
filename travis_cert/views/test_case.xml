@@ -1,51 +1,51 @@
 <odoo>
-  <data>
-
-    <record model="ir.ui.view" id="travis_cert.list">
-      <field name="name">travis_cert list</field>
-      <field name="model">test.case</field>
-      <field name="arch" type="xml">
-        <form>
-             <sheet string="Test">
-                 <field name="name"/>
-                 <group>
-                     <group>
-          <field name="value"/>
-
-                     </group>
-                     <group>
-                        <field name="value2"/>
-                     </group>
-                 </group>
-                 <group>
-                     <group>
-                         <field name="result"/>
-                     </group>
-                 </group>
-                 <button name="compute" string="Compute" type="object" class="btn-primary"/>
-             </sheet>
-        </form>
-      </field>
-    </record>
-
-    <!-- actions opening views on models -->
-    <record model="ir.actions.act_window" id="travis_cert.action_window">
-      <field name="name">travis_cert window</field>
-      <field name="res_model">test.case</field>
-      <field name="view_mode">tree,form</field>
-    </record>
-
-
-
-    <!-- Top menu item -->
-    <menuitem name="travis_cert" id="travis_cert.menu_root"/>
-    <!-- menu categories -->
-
-    <menuitem name="Test" id="travis_cert.menu_1" parent="travis_cert.menu_root"/>
-
-    <!-- actions -->
-    <menuitem name="List" id="travis_cert.menu_1_list" parent="travis_cert.menu_1"
-              action="travis_cert.action_window"/>
-
-  </data>
+    <data>
+        <record model="ir.ui.view" id="travis_cert.list">
+            <field name="name">travis_cert list</field>
+            <field name="model">test.case</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet string="Test">
+                        <field name="name" />
+                        <group>
+                            <group>
+                                <field name="value" />
+                            </group>
+                            <group>
+                                <field name="value2" />
+                            </group>
+                        </group>
+                        <group>
+                            <group>
+                                <field name="result" />
+                            </group>
+                        </group>
+                        <button
+                            name="compute"
+                            string="Compute"
+                            type="object"
+                            class="btn-primary"
+                        />
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <!-- actions opening views on models -->
+        <record model="ir.actions.act_window" id="travis_cert.action_window">
+            <field name="name">travis_cert window</field>
+            <field name="res_model">test.case</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        <!-- Top menu item -->
+        <menuitem name="travis_cert" id="travis_cert.menu_root" />
+        <!-- menu categories -->
+        <menuitem name="Test" id="travis_cert.menu_1" parent="travis_cert.menu_root" />
+        <!-- actions -->
+        <menuitem
+            name="List"
+            id="travis_cert.menu_1_list"
+            parent="travis_cert.menu_1"
+            action="travis_cert.action_window"
+        />
+    </data>
 </odoo>
