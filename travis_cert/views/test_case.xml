@@ -1,6 +1,6 @@
 <odoo>
     <data>
-        <record model="ir.ui.view" id="travis_cert.list">
+        <record model="ir.ui.view" id="list">
             <field name="name">list</field>
             <field name="model">test.case</field>
             <field name="arch" type="xml">
@@ -31,7 +31,7 @@
             </field>
         </record>
         <!-- actions opening views on models -->
-        <record model="ir.actions.act_window" id="travis_cert.action_window">
+        <record model="ir.actions.act_window" id="action_window">
             <field name="name">window</field>
             <field name="res_model">test.case</field>
             <field name="view_mode">tree,form</field>
